@@ -5,7 +5,7 @@ import java.util.Random;
 public class hw2_2 {
 	public static void main(String[] args) {
 		Random rand= new Random();
-		int ans=30;
+		int ans=rand.nextInt(100);
 		int min=0;
 		int max=100;
 		int guess=0;
@@ -15,10 +15,12 @@ public class hw2_2 {
 			guess=sc.nextInt();
 			
 		if(guess>ans){
-		    System.out.println("0到" +guess);
+		    System.out.println( +min"到" +guess);
+		    max=guess;
 		}
 		else if(guess<ans) {
-			System.out.println(guess+"到100");
+			System.out.println(guess+"到"+max);
+			min=guess;
 		}
 		else  {
 			System.out.println("你猜對了!!");
