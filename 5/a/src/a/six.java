@@ -30,11 +30,12 @@ public class six {
        }}else {
            System.out.println("Error!");
            scanner.next(); // 這裡消耗了無效的輸入
-       }
-   } else {
+       }}
+   else {
        System.out.println("Error!");
        scanner.next(); // 這裡消耗了無效的輸入
    }
+    	}
     	gameEnded=checkWinner(board,currentPlayer);
      if(!gameEnded) {
     	 currentPlayer=(currentPlayer=='X')?'0':'X';
@@ -42,7 +43,7 @@ public class six {
      }
        drawBoard(board);
        System.out.println("Player"+currentPlayer+"wins!");
-    }}
+    }
     	public static void drawBoard (char[] []board) {
        System.out.println("Board:");
        for(int i=0;i<3;i++) {
